@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Create a class LIFOCache that
+"""Create a class LRUCache that
 inherits from BaseCaching and is a caching system"""
 from base_caching import BaseCaching
 
 
-class LIFOCache(BaseCaching):
+class LRUCache(BaseCaching):
     """
-    LIFOCache class
+    LRUCache class
     """
 
     def __init__(self) -> None:
