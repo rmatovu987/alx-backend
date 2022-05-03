@@ -18,10 +18,14 @@ class LIFOCache(BaseCaching):
         """
         if not (key is None or item is None):
             self.cache_data[key] = item
-            temp = list(self.cache_data.keys())
-            if len(temp) > self.MAX_ITEMS:
-                self.cache_data.pop(temp[len(temp) - 1])
-                print(f'DISCARD: {temp[len(temp) - 1]}')
+            temp_list = [x for x in self.cache_data.keys()]
+            if len(self.cache_data.keys()) > self.MAX_ITEMS:
+                if temp_list.count(key) > 1:
+                    pop = key
+                else:
+                    pop = temp_list[-2]
+                self.cache_data.pop(pop)
+                print(f"DISCARD: {pop}")
 
     def get(self, key):
         """
