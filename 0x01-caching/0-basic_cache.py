@@ -3,12 +3,11 @@
 Create a class BasicCache that
 inherits from BaseCaching and is a caching system:
 """
-from abc import ABC
 
 from base_caching import BaseCaching
 
 
-class BasicCache(BaseCaching, ABC):
+class BasicCache(BaseCaching):
     """Basic Cache class"""
 
     def put(self, key, item):
