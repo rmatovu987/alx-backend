@@ -12,7 +12,7 @@ babel = Babel(app)
 
 class Config(object):
     """
-    This is the configuration class
+    This class is used to configure the application.
     """
     LANGUAGES = ['en', 'fr']
     BABEL_DEFAULT_LOCALE = 'en'
